@@ -1,0 +1,19 @@
+version: "1.0"
+name: "OctoBot"
+description: "A free, open-source cryptocurrency trading bot"
+repository: "https://github.com/Drakkar-Software/OctoBot"
+image:
+  container: "drakkarsoftware/octobot:latest"
+  volumes:
+    - "/data/octobot:/config"
+  ports:
+    - "5000:5000"
+env:
+  - "OCTOBOT_CONFIG_PATH=/config"
+  - "TZ=UTC"
+dependencies: []
+healthcheck:
+  test: ["CMD", "curl", "-f", "http://localhost:5000"]
+  interval: "30s"
+  timeout: "10s"
+  retries: 3
