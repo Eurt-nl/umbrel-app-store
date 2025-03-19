@@ -1,0 +1,19 @@
+version: "1.0"
+name: "Freqtrade"
+description: "A free and open-source cryptocurrency trading bot"
+repository: "https://github.com/freqtrade/freqtrade"
+image:
+  container: "freqtrade/freqtrade:stable"
+  volumes:
+    - "/data/freqtrade:/freqtrade/user_data"
+  ports:
+    - "8080:8080"
+env:
+  - "TZ=UTC"
+  - "FT_CONFIG_PATH=/freqtrade/user_data/config.json"
+dependencies: []
+healthcheck:
+  test: ["CMD", "curl", "-f", "http://localhost:8080"]
+  interval: "30s"
+  timeout: "10s"
+  retries: 3
