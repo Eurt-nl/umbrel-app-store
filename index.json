@@ -2,7 +2,7 @@
   "version": "1",
   "apps": [
     {
-      "id": "octobot",
+      "id": "eurtnl-octobot",
       "name": "OctoBot",
       "tagline": "A free, open-source cryptocurrency trading bot",
       "description": "OctoBot is a powerful, automated trading bot for cryptocurrencies.",
@@ -11,7 +11,7 @@
       "manifest": "https://raw.githubusercontent.com/Eurt-nl/umbrel-app-store/main/apps/octobot/umbrel-app.yml"
     },
     {
-      "id": "freqtrade",
+      "id": "eurtnl-freqtrade",
       "name": "Freqtrade",
       "tagline": "A free and open-source cryptocurrency trading bot",
       "description": "Freqtrade is a powerful trading bot written in Python with backtesting and strategy customization.",
